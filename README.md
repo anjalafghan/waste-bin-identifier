@@ -1,0 +1,2 @@
+# waste-bin-identifier
+Dubai
