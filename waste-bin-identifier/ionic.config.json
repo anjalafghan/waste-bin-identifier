@@ -1,6 +1,8 @@
 {
   "name": "waste-bin-identifier",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular",
   "id": "c648b877"
 }
