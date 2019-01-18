@@ -23,7 +23,7 @@ export class WelcomePage {
     console.log('ionViewDidLoad WelcomePage');
   }
   login(){
-     this.navCtrl.push(LoginPage);
+     this.navCtrl.push(RegisterPage);
   }
   register(){
      this.navCtrl.push(RegisterPage);
