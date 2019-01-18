@@ -37,5 +37,6 @@ import { HomePage } from '../pages/home/home';
     Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
+
 })
 export class AppModule {}
