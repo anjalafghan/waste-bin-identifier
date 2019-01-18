@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Geolocation } from '@ionic-native/geolocation';
+
 /**
  * Generated class for the RegisterPage page.
  *
@@ -14,27 +16,38 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
+
   myphoto:any;
-    constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera ) {
+  lat:any;
+  lng:any;
+    
+  constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, public geo: Geolocation ) {
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
-  }
-  opencamera(){
-   const options: CameraOptions = {
-  quality: 70,
-  destinationType: this.camera.DestinationType.DATA_URL,
-  encodingType: this.camera.EncodingType.JPEG,
-  mediaType: this.camera.MediaType.PICTURE
-}
+    this.geo.getCurrentPosition().then( pos => {
+      this.lat = pos.coords.latitude;
+      this.lng = pos.coords.longitude;
+    }).catch(err => console.log(err));
 
-this.camera.getPicture(options).then((imageData) => {
- // imageData is either a base64 encoded string or a file URI
- // If it's base64 (DATA_URL):
- this.myphoto = 'data:image/jpg;base64,' + imageData;
-}, (err) => {
- // Handle error
-});
+  }
+
+  opencamera(){
+    const options: CameraOptions = {
+    quality: 70,
+    destinationType: this.camera.DestinationType.DATA_URL,
+    encodingType: this.camera.EncodingType.JPEG,
+    mediaType: this.camera.MediaType.PICTURE
+    }
+
+  this.camera.getPicture(options).then((imageData) => {
+   // imageData is either a base64 encoded string or a file URI
+   // If it's base64 (DATA_URL):
+   this.myphoto = 'data:image/jpg;base64,' + imageData;
+  }, (err) => {
+   // Handle error
+  });
   }
 }
