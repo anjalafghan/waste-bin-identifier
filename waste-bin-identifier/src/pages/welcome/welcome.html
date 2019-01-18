@@ -6,8 +6,21 @@
     <ion-row>
       <ion-col col-auto>
         <h1 heading>Waste Bin Identifier</h1>
+
+        <ion-list>
+
+  			<ion-item>
+    			<ion-label fixed>Username</ion-label>
+    			<ion-input type="text" value=""></ion-input>
+  			</ion-item>
+
+  			<ion-item>
+    			<ion-label fixed>Password</ion-label>
+    			<ion-input type="password"></ion-input>
+  			</ion-item>
+
+		</ion-list>
         <button ion-button block medium id="signin" (click)="login()">SignIn</button>
-        <button ion-button block medium id="signup" (click)="register()">SignUp</button>
       </ion-col>
     </ion-row>
   </ion-grid>
