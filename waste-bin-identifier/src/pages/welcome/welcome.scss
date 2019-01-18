@@ -1,23 +1,22 @@
 page-welcome {
-	align-items: center;
 
 .button{
 	width: 40%;
-	
+
 }
 #welcome{
 	text-align: center;
-	background: rgb(255, 255, 255);
+	background: light;
 	h1{
 	margin-top:100px;
 	font-size:60px;
 	}
 	#signin{
-	background-color:#2D8AFF;
+	background-color:primary;
 	margin-top:200px;
 	}
 	#signup{
-	background-color:#2D8AFF;
+	background-color:primary;
 	margin-top:10px;
 	}
 }
