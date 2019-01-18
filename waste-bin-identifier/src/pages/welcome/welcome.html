@@ -2,8 +2,14 @@
 
 
 <ion-content padding id="welcome">
-<h1>Waste Bin Identifier</h1>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-auto>
+        <h1 heading>Waste Bin Identifier</h1>
+        <button ion-button block medium id="signin" (click)="login()">SignIn</button>
+        <button ion-button block medium id="signup" (click)="register()">SignUp</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-<button ion-button block medium id="signin" (click)="login()">SignIn</button>
-<button ion-button block medium id="signup" (click)="register()">SignUp</button>
 </ion-content>
