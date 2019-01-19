@@ -20,7 +20,7 @@ export class RegisterPage {
   myphoto:any;
   lat:any;
   lng:any;
-    
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, public geo: Geolocation ) {
 
   }

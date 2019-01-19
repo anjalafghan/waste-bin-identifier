@@ -11,6 +11,12 @@ import { WelcomePage } from '../pages/welcome/welcome';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { HomePage } from '../pages/home/home';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { Toast } from '@ionic-native/toast';
+import { DataServiceProvider } from '../providers/data-service/data-service';
+import { HttpModule } from '@angular/http';
+
+
 
 
 @NgModule({
@@ -23,7 +29,9 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+     HttpModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,5 +48,6 @@ import { HomePage } from '../pages/home/home';
     Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
+
 })
 export class AppModule {}
