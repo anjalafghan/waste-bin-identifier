@@ -31,22 +31,9 @@
     </ion-row>
     <ion-row>
       <ion-col col-auto>
-        <h1>
-  <button ion-button color="dark" full round (click)="scan()">Start Scan</button>
-</h1>
-
-<ion-card *ngIf="productFound">
-  <ion-card-header>
-    <h2>Price: $ {{selectedProduct.price}}</h2>
-  </ion-card-header>
-  <ion-card-content>
-    <ul>
-      <li>{{selectedProduct.plu}}</li>
-      <li>{{selectedProduct.name}}</li>
-      <li>{{selectedProduct.desc}}</li>
-    </ul>
-  </ion-card-content>
-</ion-card>
+        <!-- <button ion-button block id="location" (click)=""></button> -->
+        <p>Lat: {{ lat }}</p>
+        <p>Lng: {{ lng }}</p>
       </ion-col>
     </ion-row>
   </ion-grid>
