@@ -1,28 +1,27 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 
 
 
-<ion-content padding id="welcome">
-  <ion-grid>
-    <ion-row>
-      <ion-col col-auto>
-        <h1 heading>Waste Bin Identifier</h1>
+<ion-content padding id="login">
+<ion-list>
 
-        <ion-list>
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input type="text" value=""></ion-input>
+  </ion-item>
 
-  			<ion-item>
-    			<ion-label fixed>Username</ion-label>
-    			<ion-input type="text" value=""></ion-input>
-  			</ion-item>
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
 
-  			<ion-item>
-    			<ion-label fixed>Password</ion-label>
-    			<ion-input type="password"></ion-input>
-  			</ion-item>
+  <button ion-button block medium id="signin" (click)="login()">Login</button>
+  <button ion-button block id="signup" (click)="register()">Register</button>
 
-		</ion-list>
-        <button ion-button block medium id="signin" (click)="login()">SignIn</button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
+</ion-list>
 </ion-content>

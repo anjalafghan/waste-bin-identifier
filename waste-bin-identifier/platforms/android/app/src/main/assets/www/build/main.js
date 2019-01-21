@@ -42,9 +42,9 @@ var WelcomePage = /** @class */ (function () {
     };
     WelcomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-welcome',template:/*ion-inline-start:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/welcome/welcome.html"*/'\n\n\n<ion-content padding id="welcome">\n  <ion-grid>\n    <ion-row>\n      <ion-col col-auto>\n        <h1 heading>Waste Bin Identifier</h1>\n\n        <ion-list>\n\n  			<ion-item>\n    			<ion-label fixed>Username</ion-label>\n    			<ion-input type="text" value=""></ion-input>\n  			</ion-item>\n\n  			<ion-item>\n    			<ion-label fixed>Password</ion-label>\n    			<ion-input type="password"></ion-input>\n  			</ion-item>\n\n		</ion-list>\n        <button ion-button block medium id="signin" (click)="login()">SignIn</button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/welcome/welcome.html"*/,
+            selector: 'page-welcome',template:/*ion-inline-start:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/welcome/welcome.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n\n<ion-content padding id="login">\n<ion-list>\n\n  <ion-item>\n    <ion-label floating>Username</ion-label>\n    <ion-input type="text" value=""></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Password</ion-label>\n    <ion-input type="password"></ion-input>\n  </ion-item>\n\n  <button ion-button block medium id="signin" (click)="login()">Login</button>\n  <button ion-button block id="signup" (click)="register()">Register</button>\n\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/welcome/welcome.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], WelcomePage);
     return WelcomePage;
 }());
@@ -75,15 +75,15 @@ webpackEmptyAsyncContext.id = 111;
 
 var map = {
 	"../pages/login/login.module": [
-		274,
+		275,
 		2
 	],
 	"../pages/register/register.module": [
-		275,
+		276,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		276,
+		277,
 		0
 	]
 };
@@ -103,7 +103,7 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 197:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -142,9 +142,9 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding id="login">\n<ion-list>\n\n  <ion-item>\n    <ion-label fixed>Username</ion-label>\n    <ion-input type="text" value=""></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label fixed>Password</ion-label>\n    <ion-input type="password"></ion-input>\n  </ion-item>\n\n  <button ion-button block medium id="signin" (click)="login()">Login</button>\n  <!-- <button ion-button block id="signup" (click)="register()">Register</button> -->\n\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n\n<ion-content padding id="login">\n<ion-list>\n\n  <ion-item>\n    <ion-label floating>Username</ion-label>\n    <ion-input type="text" value=""></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Password</ion-label>\n    <ion-input type="password"></ion-input>\n  </ion-item>\n\n  <button ion-button block medium id="signin" (click)="login()">Login</button>\n  <button ion-button block id="signup" (click)="register()">Register</button>\n\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], LoginPage);
     return LoginPage;
 }());
@@ -153,13 +153,13 @@ var LoginPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 198:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(222);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -167,7 +167,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 221:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -175,22 +175,24 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(153);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_geolocation__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(272);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_welcome_welcome__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_register_register__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_home__ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_http__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_home__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_barcode_scanner__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_http__ = __webpack_require__(274);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -218,16 +220,16 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                     ]
                 }),
-                __WEBPACK_IMPORTED_MODULE_12__angular_http__["a" /* HttpModule */]
+                __WEBPACK_IMPORTED_MODULE_13__angular_http__["a" /* HttpModule */]
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_welcome_welcome__["a" /* WelcomePage */],
@@ -240,7 +242,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
                 __WEBPACK_IMPORTED_MODULE_6__ionic_native_geolocation__["a" /* Geolocation */],
                 __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__["a" /* Camera */],
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
+                __WEBPACK_IMPORTED_MODULE_12__ionic_native_barcode_scanner__["a" /* BarcodeScanner */],
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
             ]
         })
     ], AppModule);
@@ -251,15 +254,15 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 271:
+/***/ 272:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_welcome_welcome__ = __webpack_require__(101);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -288,7 +291,7 @@ var MyApp = /** @class */ (function () {
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
@@ -297,7 +300,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 272:
+/***/ 273:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -323,7 +326,7 @@ var HomePage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Ionic Blank\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  The world is your oyster.\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.\n  </p>\n</ion-content>\n'/*ion-inline-end:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], HomePage);
     return HomePage;
 }());
@@ -341,6 +344,7 @@ var HomePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(153);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_barcode_scanner__ = __webpack_require__(156);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -354,6 +358,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the RegisterPage page.
  *
@@ -361,12 +366,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var RegisterPage = /** @class */ (function () {
-    function RegisterPage(navCtrl, navParams, camera, geo) {
+    function RegisterPage(navCtrl, navParams, camera, geo, alertCtrl, barcodeScanner) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.camera = camera;
         this.geo = geo;
+        this.alertCtrl = alertCtrl;
+        this.barcodeScanner = barcodeScanner;
     }
+    RegisterPage.prototype.scan = function () {
+        var _this = this;
+        this.barcodeScanner.scan().then(function (data) {
+            // this is called when a barcode is found
+            _this.num = data.text;
+        });
+    };
     RegisterPage.prototype.ionViewDidLoad = function () {
         var _this = this;
         console.log('ionViewDidLoad RegisterPage');
@@ -375,27 +389,54 @@ var RegisterPage = /** @class */ (function () {
             _this.lng = pos.coords.longitude;
         }).catch(function (err) { return console.log(err); });
     };
+    RegisterPage.prototype.ngOnInit = function () {
+        this.photo = [];
+    };
     RegisterPage.prototype.opencamera = function () {
         var _this = this;
         var options = {
             quality: 70,
             destinationType: this.camera.DestinationType.DATA_URL,
             encodingType: this.camera.EncodingType.JPEG,
+            saveToPhotoAlbum: true,
             mediaType: this.camera.MediaType.PICTURE
         };
         this.camera.getPicture(options).then(function (imageData) {
             // imageData is either a base64 encoded string or a file URI
             // If it's base64 (DATA_URL):
             _this.myphoto = 'data:image/jpg;base64,' + imageData;
+            _this.photo.push(_this.myphoto);
+            _this.photo.reverse();
         }, function (err) {
             // Handle error
         });
     };
+    RegisterPage.prototype.deletephoto = function (index) {
+        var _this = this;
+        var confirm = this.alertCtrl.create({
+            title: 'Delete ?',
+            message: 'Do you want to Delete the Picture?',
+            buttons: [
+                {
+                    text: 'No',
+                    handler: function () {
+                    }
+                },
+                {
+                    text: 'Yes',
+                    handler: function () {
+                        _this.photo.splice(index, 1);
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
     RegisterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-register',template:/*ion-inline-start:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/register/register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>register</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content padding id="register">\n  <ion-grid>\n    <ion-row>\n      <ion-col col-auto>\n        <ion-list>\n\n          <ion-item>\n            <ion-label >Waste Bin Files</ion-label>\n            <ion-input type="file"></ion-input>\n          </ion-item>\n          <button ion-button block id="signup" (click)="opencamera()">Take Picture from Camera</button>\n         <button ion-button block id="signup" (click)="register()">Register</button>\n        </ion-list>\n        <p align="center"><img src="{{ myphoto }}"></p>\n         <img id="camera-image" />\n          <img src="{{ base64Image }}" alt="">\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-auto>\n        <!-- <button ion-button block id="location" (click)=""></button> -->\n        <p>Lat: {{ lat }}</p>\n        <p>Lng: {{ lng }}</p>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/register/register.html"*/,
+            selector: 'page-register',template:/*ion-inline-start:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/register/register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>register</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding id="register">\n  <ion-grid>\n    <ion-row>\n      <ion-col col-auto>\n        <ion-list>\n\n\n\n          <ion-item>\n            <button ion-button (click)="scan()">Scan</button>\n          </ion-item>\n\n\n\n          <ion-card>\n        <ion-card-header>\n          Barcode / QR code Text\n        </ion-card-header>\n        <ion-card-content id="code_content">\n          {{num}}\n        </ion-card-content>\n      </ion-card>\n\n        </ion-list>\n        <ion-list>\n\n          <ion-item>\n            <ion-label >Waste Bin Files</ion-label>\n            <ion-input type="file"></ion-input>\n          </ion-item>\n          <button ion-button block id="signup" (click)="opencamera()">Take Picture from Camera</button>\n         <button ion-button block id="signup" (click)="register()">Register</button>\n        </ion-list>\n        <p align="center"><img src="{{ myphoto }}"></p>\n         <img id="camera-image" />\n          <img src="{{ base64Image }}" alt="">\n      </ion-col>\n    </ion-row>\n\n      <ion-row>\n      <ion-col col-6 *ngFor="let pic of photo; let id = index">\n        <ion-card class="block">\n          <ion-icon name="close" class="deleteicon" (click)="deletephoto(id)"></ion-icon>\n      <img src="{{ pic }}" *ngIf="pic" />\n    </ion-card>\n      </ion-col>\n\n    </ion-row>\n\n\n    <ion-row>\n      <ion-col col-auto>\n        <!-- <button ion-button block id="location" (click)=""></button> -->\n        <p>Lat: {{ lat }}</p>\n        <p>Lng: {{ lng }}</p>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/register/register.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_barcode_scanner__["a" /* BarcodeScanner */]])
     ], RegisterPage);
     return RegisterPage;
 }());
@@ -404,5 +445,5 @@ var RegisterPage = /** @class */ (function () {
 
 /***/ })
 
-},[198]);
+},[199]);
 //# sourceMappingURL=main.js.map

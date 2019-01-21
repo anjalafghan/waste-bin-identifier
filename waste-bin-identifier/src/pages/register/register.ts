@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Geolocation } from '@ionic-native/geolocation';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+
 
 /**
  * Generated class for the RegisterPage page.
@@ -19,14 +21,19 @@ export class RegisterPage {
 
   myphoto:any;
   photo:any;
-
+  num:string;
   lat:any;
   lng:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, public geo: Geolocation, private alertCtrl: AlertController ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, public geo: Geolocation, private alertCtrl: AlertController, private barcodeScanner: BarcodeScanner ) {
 
   }
-
+  scan() {
+    this.barcodeScanner.scan().then(data => {
+        // this is called when a barcode is found
+        this.num = data.text
+      });
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
     this.geo.getCurrentPosition().then( pos => {
