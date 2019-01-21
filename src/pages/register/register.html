@@ -23,21 +23,16 @@
 
 </ion-list>
  
-  <ion-grid>
-    <ion-row>
-      <ion-col col-12>
-      
-      </ion-col>
-    </ion-row>
-    <ion-row>
-    <ion-col col-6 *ngFor="let pic of photo; let id = index">
-      <ion-card class="block">
+ 
+    
+    <ion-slides>
+    <ion-slide col-6 *ngFor="let pic of photo; let id = index">
+    
         <ion-icon name="close" class="deleteicon" (click)="deletephoto(id)"></ion-icon>
    <img src="{{ pic }}" *ngIf="pic" imageViewer />
-     </ion-card>
-    </ion-col>
-   
-  </ion-row>
-  </ion-grid>
+    
+    </ion-slide>
+   </ion-slides>
+  
   
 </ion-content>
