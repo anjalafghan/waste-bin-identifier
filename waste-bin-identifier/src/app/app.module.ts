@@ -46,6 +46,7 @@ import { HttpModule } from '@angular/http';
     SplashScreen,
     Geolocation,
     Camera,
+    BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 

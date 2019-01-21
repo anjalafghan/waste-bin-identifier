@@ -11,10 +11,32 @@
   </ion-navbar>
 
 </ion-header>
+
+
 <ion-content padding id="register">
   <ion-grid>
     <ion-row>
       <ion-col col-auto>
+        <ion-list>
+
+
+
+          <ion-item>
+            <button ion-button (click)="scan()">Scan</button>
+          </ion-item>
+
+
+
+          <ion-card>
+        <ion-card-header>
+          Barcode / QR code Text
+        </ion-card-header>
+        <ion-card-content id="code_content">
+          {{num}}
+        </ion-card-content>
+      </ion-card>
+
+        </ion-list>
         <ion-list>
 
           <ion-item>
