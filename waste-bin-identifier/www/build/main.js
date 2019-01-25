@@ -1,4 +1,4 @@
-webpackJsonp([3],{
+webpackJsonp([4],{
 
 /***/ 101:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -42,7 +42,7 @@ var WelcomePage = /** @class */ (function () {
     };
     WelcomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-welcome',template:/*ion-inline-start:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/welcome/welcome.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n\n<ion-content padding id="login">\n<ion-list>\n\n  <ion-item>\n    <ion-label floating>Username</ion-label>\n    <ion-input type="text" value=""></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Password</ion-label>\n    <ion-input type="password"></ion-input>\n  </ion-item>\n\n  <button ion-button block medium id="signin" (click)="login()">Login</button>\n  <button ion-button block id="signup" (click)="register()">Register</button>\n\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/welcome/welcome.html"*/,
+            selector: 'page-welcome',template:/*ion-inline-start:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/welcome/welcome.html"*/'\n\n\n<ion-content padding id="login">\n<ion-card id="mycard">\n  <ion-card-content>\n    <ion-list id="mylist">\n\n    <ion-item>\n      <ion-label floating>Username</ion-label>\n      <ion-input type="text" value=""></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type="password"></ion-input>\n    </ion-item>\n<br>\n    <button ion-button block medium id="signin" id="mybutton" (click)="login()">Login</button>\n\n    </ion-list>\n  </ion-card-content>\n</ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/welcome/welcome.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], WelcomePage);
@@ -74,17 +74,21 @@ webpackEmptyAsyncContext.id = 111;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"../pages/login/login.module": [
+	"../pages/barcode/barcode.module": [
 		275,
-		2
+		0
+	],
+	"../pages/login/login.module": [
+		276,
+		3
 	],
 	"../pages/register/register.module": [
-		276,
-		1
+		277,
+		2
 	],
 	"../pages/welcome/welcome.module": [
-		277,
-		0
+		278,
+		1
 	]
 };
 function webpackAsyncContext(req) {
@@ -142,7 +146,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n\n<ion-content padding id="login">\n<ion-list>\n\n  <ion-item>\n    <ion-label floating>Username</ion-label>\n    <ion-input type="text" value=""></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Password</ion-label>\n    <ion-input type="password"></ion-input>\n  </ion-item>\n\n  <button ion-button block medium id="signin" (click)="login()">Login</button>\n  <button ion-button block id="signup" (click)="register()">Register</button>\n\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/login/login.html"*/'\n\n\n<ion-content padding id="login">\n<ion-card>\n  <ion-card-content>\n    <ion-list>\n\n    <ion-item>\n      <ion-label floating>Username</ion-label>\n      <ion-input type="text" value=""></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type="password"></ion-input>\n    </ion-item>\n\n    <button ion-button block medium id="signin" (click)="login()">Login</button>\n\n    </ion-list>\n  </ion-card-content>\n</ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/login/login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], LoginPage);
@@ -222,6 +226,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                     links: [
+                        { loadChildren: '../pages/barcode/barcode.module#BarcodePageModule', name: 'BarcodePage', segment: 'barcode', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
@@ -434,7 +439,7 @@ var RegisterPage = /** @class */ (function () {
     };
     RegisterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-register',template:/*ion-inline-start:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/register/register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>register</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding id="register">\n  <ion-grid>\n    <ion-row>\n      <ion-col col-auto>\n        <ion-list>\n\n\n\n          <ion-item>\n            <button ion-button (click)="scan()">Scan</button>\n          </ion-item>\n\n\n\n          <ion-card>\n        <ion-card-header>\n          Barcode / QR code Text\n        </ion-card-header>\n        <ion-card-content id="code_content">\n          {{num}}\n        </ion-card-content>\n      </ion-card>\n\n        </ion-list>\n        <ion-list>\n\n          <ion-item>\n            <ion-label >Waste Bin Files</ion-label>\n            <ion-input type="file"></ion-input>\n          </ion-item>\n          <button ion-button block id="signup" (click)="opencamera()">Take Picture from Camera</button>\n         <button ion-button block id="signup" (click)="register()">Register</button>\n        </ion-list>\n        <p align="center"><img src="{{ myphoto }}"></p>\n         <img id="camera-image" />\n          <img src="{{ base64Image }}" alt="">\n      </ion-col>\n    </ion-row>\n\n      <ion-row>\n      <ion-col col-6 *ngFor="let pic of photo; let id = index">\n        <ion-card class="block">\n          <ion-icon name="close" class="deleteicon" (click)="deletephoto(id)"></ion-icon>\n      <img src="{{ pic }}" *ngIf="pic" />\n    </ion-card>\n      </ion-col>\n\n    </ion-row>\n\n\n    <ion-row>\n      <ion-col col-auto>\n        <!-- <button ion-button block id="location" (click)=""></button> -->\n        <p>Lat: {{ lat }}</p>\n        <p>Lng: {{ lng }}</p>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/register/register.html"*/,
+            selector: 'page-register',template:/*ion-inline-start:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/register/register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>register</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding id="register">\n  <ion-grid>\n    <ion-row>\n      <ion-col col-auto>\n        <ion-list>\n\n\n\n          <ion-item>\n            <button ion-button (click)="scan()">Scan</button>\n          </ion-item>\n\n\n\n          <ion-card>\n        <ion-card-header>\n          Barcode / QR code Text\n        </ion-card-header>\n        <ion-card-content id="code_content">\n          {{num}}\n        </ion-card-content>\n      </ion-card>\n\n        </ion-list>\n        <ion-list>\n\n          <ion-item>\n            <ion-label >Waste Bin Files</ion-label>\n            <ion-input type="file"></ion-input>\n          </ion-item>\n          <button ion-button block id="signup" (click)="opencamera()">Take Picture from Camera</button>\n         <button ion-button block id="signup" (click)="register()">Register</button>\n        </ion-list>\n        <p align="center"><img src="{{ myphoto }}"></p>\n         <img id="camera-image" />\n          <img src="{{ base64Image }}" alt="">\n      </ion-col>\n    </ion-row>\n\n    <ion-slides>\n  <ion-slide col-6 *ngFor="let pic of photo; let id = index">\n    <ion-icon name="close" class="deleteicon" (click)="deletephoto(id)"></ion-icon>\n      <img src="{{ pic }}" *ngIf="pic" imageViewer />\n    </ion-slide>\n</ion-slides>\n\n    <ion-row>\n      <ion-col col-auto>\n        <!-- <button ion-button block id="location" (click)=""></button> -->\n        <p>Lat: {{ lat }}</p>\n        <p>Lng: {{ lng }}</p>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/src/pages/register/register.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_barcode_scanner__["a" /* BarcodeScanner */]])
     ], RegisterPage);

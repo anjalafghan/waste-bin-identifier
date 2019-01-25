@@ -25688,3 +25688,28 @@ page-register #register #signup {
   background-color: #3CE316;
   margin-top: 20px;
 }
+
+page-register #register #image-container {
+  width: 100px;
+  height: 100px;
+}
+
+page-register #register .block {
+  position: relative;
+}
+
+page-register #register .block .deleteicon {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 100px;
+  color: white;
+  font-size: 20px;
+}
+
+page-welcome {
+  margin-top: 25%;
+}
+
+page-welcome #mycard {
+  height: 300px;
+}

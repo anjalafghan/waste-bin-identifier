@@ -52,16 +52,12 @@
       </ion-col>
     </ion-row>
 
-      <ion-row>
-      <ion-col col-6 *ngFor="let pic of photo; let id = index">
-        <ion-card class="block">
-          <ion-icon name="close" class="deleteicon" (click)="deletephoto(id)"></ion-icon>
-      <img src="{{ pic }}" *ngIf="pic" />
-    </ion-card>
-      </ion-col>
-
-    </ion-row>
-
+    <ion-slides>
+  <ion-slide col-6 *ngFor="let pic of photo; let id = index">
+    <ion-icon name="close" class="deleteicon" (click)="deletephoto(id)"></ion-icon>
+      <img src="{{ pic }}" *ngIf="pic" imageViewer />
+    </ion-slide>
+</ion-slides>
 
     <ion-row>
       <ion-col col-auto>
