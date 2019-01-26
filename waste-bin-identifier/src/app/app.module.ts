@@ -8,9 +8,8 @@ import { Camera } from '@ionic-native/camera';
 import { Geolocation } from '@ionic-native/geolocation';
 import { MyApp } from './app.component';
 import { WelcomePage } from '../pages/welcome/welcome';
-import { LoginPage } from '../pages/login/login';
-import { RegisterPage } from '../pages/register/register';
-import { HomePage } from '../pages/home/home';
+import { MainPage } from '../pages/main/main';
+import {BarcodePage} from '../pages/barcode/barcode';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Toast } from '@ionic-native/toast';
 import { DataServiceProvider } from '../providers/data-service/data-service';
@@ -23,9 +22,8 @@ import { HttpModule } from '@angular/http';
   declarations: [
     MyApp,
     WelcomePage,
-    LoginPage,
-    RegisterPage,
-    HomePage
+    BarcodePage,
+    MainPage,
   ],
   imports: [
     BrowserModule,
@@ -37,9 +35,8 @@ import { HttpModule } from '@angular/http';
   entryComponents: [
     MyApp,
     WelcomePage,
-    LoginPage,
-    RegisterPage,
-    HomePage
+    BarcodePage,
+    MainPage
   ],
   providers: [
     StatusBar,

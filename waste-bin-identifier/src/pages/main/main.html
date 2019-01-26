@@ -1,5 +1,5 @@
 <!--
-  Generated template for the RegisterPage page.
+  Generated template for the mainPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,44 +7,33 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>register</ion-title>
+    <ion-title>main</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding id="register">
+<ion-content padding id="main">
   <ion-grid>
     <ion-row>
       <ion-col col-auto>
         <ion-list>
-
-
-
-          <ion-item>
-            <button ion-button (click)="scan()">Scan</button>
-          </ion-item>
-
-
-
           <ion-card>
         <ion-card-header>
           Barcode / QR code Text
         </ion-card-header>
         <ion-card-content id="code_content">
-          {{num}}
+          {{param1}}
         </ion-card-content>
       </ion-card>
-
         </ion-list>
         <ion-list>
-
           <ion-item>
             <ion-label >Waste Bin Files</ion-label>
             <ion-input type="file"></ion-input>
           </ion-item>
           <button ion-button block id="signup" (click)="opencamera()">Take Picture from Camera</button>
-         <!-- <button ion-button block id="signup" (click)="register()">Register</button> -->
+         <!-- <button ion-button block id="signup" (click)="main()">main</button> -->
         </ion-list>
         <p align="center"><img src="{{ myphoto }}"></p>
          <img id="camera-image" />
@@ -70,8 +59,8 @@
     <ion-item id="Condition">
       <ion-label>Condition</ion-label>
       <ion-select [(ngModel)]="Condition">
-        <ion-option value="g">Good</ion-option>
-        <ion-option value="d">Damaged</ion-option>
+        <ion-option value="0">Good</ion-option>
+        <ion-option value="1">Damaged</ion-option>
       </ion-select>
     </ion-item>
 

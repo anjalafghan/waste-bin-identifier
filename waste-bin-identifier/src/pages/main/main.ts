@@ -6,7 +6,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 
 /**
- * Generated class for the RegisterPage page.
+ * Generated class for the MainPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -14,38 +14,31 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @IonicPage()
 @Component({
-  selector: 'page-register',
-  templateUrl: 'register.html',
+  selector: 'page-main',
+  templateUrl: 'main.html',
 })
-export class RegisterPage {
-
-  myphoto:any;
-  photo:any;
-  num:string;
-  lat:any;
-  lng:any;
+export class MainPage {
+myphoto:any;
+photo:any;
+lat:any;
+lng:any;
+param1:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, public geo: Geolocation, private alertCtrl: AlertController, private barcodeScanner: BarcodeScanner ) {
+    this.param1 = navParams.get('param1');
 
   }
-  scan() {
-    this.barcodeScanner.scan().then(data => {
-        // this is called when a barcode is found
-        this.num = data.text
-      });
-  }
+
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RegisterPage');
+    console.log('ionViewDidLoad MainPage');
     this.geo.getCurrentPosition().then( pos => {
       this.lat = pos.coords.latitude;
       this.lng = pos.coords.longitude;
     }).catch(err => console.log(err));
-
   }
   ngOnInit(){
   this.photo = [];
   }
-
   opencamera(){
    const options: CameraOptions = {
   quality: 70,
