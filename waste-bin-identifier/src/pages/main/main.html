@@ -15,18 +15,24 @@
 
 <ion-content padding id="main">
   <ion-grid>
+    <ion-card>
+      <ion-card-header>
+  <ion-card-title>Your Bin</ion-card-title>
+</ion-card-header>
+<ion-card-content>
     <ion-row>
       <ion-col col-auto>
         <ion-list>
-          <ion-card>
-        <ion-card-header>
-          Barcode / QR code Text
-        </ion-card-header>
-        <ion-card-content id="code_content">
+          Barcode / QR code:
           {{param1}}
-        </ion-card-content>
-      </ion-card>
         </ion-list>
+        <ion-item id="Condition">
+          <ion-label>Condition</ion-label>
+          <ion-select [(ngModel)]="Condition">
+            <ion-option value="0">Good</ion-option>
+            <ion-option value="1">Damaged</ion-option>
+          </ion-select>
+        </ion-item>
         <ion-list>
           <ion-item>
             <ion-label >Waste Bin Files</ion-label>
@@ -51,18 +57,13 @@
     <ion-row>
       <ion-col col-auto>
         <!-- <button ion-button block id="location" (click)=""></button> -->
-        <p>Lat: {{ lat }}</p>
-        <p>Lng: {{ lng }}</p>
+        <p><b>Lat:</b> {{ lat }}</p>
+        <p><b>Lng:</b> {{ lng }}</p>
       </ion-col>
     </ion-row>
 
-    <ion-item id="Condition">
-      <ion-label>Condition</ion-label>
-      <ion-select [(ngModel)]="Condition">
-        <ion-option value="0">Good</ion-option>
-        <ion-option value="1">Damaged</ion-option>
-      </ion-select>
-    </ion-item>
 
+    </ion-card-content>
+</ion-card>
   </ion-grid>
 </ion-content>

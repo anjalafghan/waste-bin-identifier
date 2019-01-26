@@ -25674,21 +25674,35 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-page-login #login #signin {
-  margin-top: 20px;
-  background-color: #B8211D;
+page-barcode #capture {
+  margin: 5px;
+  margin-top: 55%;
+  width: 100%;
+  height: 50px;
 }
 
-page-login #login #signup {
-  margin-top: 20px;
-  background-color: #0C0302;
+page-barcode ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 90px 1px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
-page-register #register #signup {
-  background-color: #3CE316;
+page-main #signup {
   margin-top: 20px;
 }
 
-page-register #Condition {
-  width: 50%;
+page-main #Condition {
+  width: 100%;
+}
+
+page-welcome {
+  margin-top: 25%;
+}
+
+page-welcome #mycard {
+  height: 300px;
 }
