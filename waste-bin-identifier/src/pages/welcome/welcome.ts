@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LoginPage } from '../login/login';
-import { RegisterPage } from '../register/register';
+import {BarcodePage} from '../barcode/barcode';
 /**
  * Generated class for the WelcomePage page.
  *
@@ -23,9 +22,7 @@ export class WelcomePage {
     console.log('ionViewDidLoad WelcomePage');
   }
   login(){
-     this.navCtrl.push(RegisterPage);
+     this.navCtrl.push(BarcodePage);
   }
-  register(){
-     this.navCtrl.push(RegisterPage);
-  }
+
 }
