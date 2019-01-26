@@ -25674,46 +25674,36 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-page-login #login #signin {
-  margin-top: 20px;
-  background-color: #B8211D;
+page-barcode #capture {
+  margin: 5px;
+  margin-top: 55%;
+  width: 100%;
+  height: 50px;
 }
 
-page-login #login #signup {
-  margin-top: 20px;
-  background-color: #0C0302;
+page-barcode ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 90px 1px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
-page-register #register #signup {
+page-main #signup {
   background-color: #3CE316;
   margin-top: 20px;
 }
 
-page-register #register #image-container {
-  width: 100px;
-  height: 100px;
-}
-
-page-register #register .block {
-  position: relative;
-}
-
-page-register #register .block .deleteicon {
-  position: relative;
-  margin-top: 20px;
-  margin-left: 100px;
-  color: white;
-  font-size: 20px;
+page-main #Condition {
+  width: 50%;
 }
 
 page-welcome {
-  margin-top: 15%;
+  margin-top: 25%;
 }
 
 page-welcome #mycard {
-  height: 52%;
-}
-
-page-welcome #mylist {
-  margin-top: 17%;
+  height: 300px;
 }
