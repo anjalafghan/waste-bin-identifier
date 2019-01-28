@@ -24,62 +24,68 @@ export class RegisterPage {
   num:string;
   lat:any;
   lng:any;
+  Latitude: number;
+  Longitude: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, public geo: Geolocation, private alertCtrl: AlertController, private barcodeScanner: BarcodeScanner ) {
 
   }
+
   scan() {
     this.barcodeScanner.scan().then(data => {
         // this is called when a barcode is found
         this.num = data.text
+        this.Latitude = this.lat;
+        this.Longitude = this.lng;
       });
   }
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
     this.geo.getCurrentPosition().then( pos => {
-      this.lat = pos.coords.latitude;
-      this.lng = pos.coords.longitude;
-    }).catch(err => console.log(err));
-
+        this.lat = pos.coords.latitude;
+        this.lng = pos.coords.longitude;
+        }).catch(err => console.log(err));
   }
+
   ngOnInit(){
-  this.photo = [];
+    this.photo = [];
   }
 
   opencamera(){
-   const options: CameraOptions = {
-  quality: 70,
-  destinationType: this.camera.DestinationType.DATA_URL,
-  encodingType: this.camera.EncodingType.JPEG,
-  saveToPhotoAlbum: true,
-  mediaType: this.camera.MediaType.PICTURE
-}
+    const options: CameraOptions = {
+      quality: 70,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      saveToPhotoAlbum: true,
+      mediaType: this.camera.MediaType.PICTURE
+    }
 
-this.camera.getPicture(options).then((imageData) => {
- // imageData is either a base64 encoded string or a file URI
- // If it's base64 (DATA_URL):
+  this.camera.getPicture(options).then((imageData) => {
+  // imageData is either a base64 encoded string or a file URI
+  // If it's base64 (DATA_URL):
 
- this.myphoto = 'data:image/jpg;base64,' + imageData;
- this.photo.push(this.myphoto);
- this.photo.reverse();
-}, (err) => {
- // Handle error
-});
+  this.myphoto = 'data:image/jpg;base64,' + imageData;
+  this.photo.push(this.myphoto);
+  this.photo.reverse();
+  }, (err) => {
+  // Handle error
+  });
   }
-  deletephoto(index){
-   const confirm = this.alertCtrl.create({
-       title: 'Delete ?',
-       message: 'Do you want to Delete the Picture?',
-       buttons: [
-         {
-           text: 'No',
-           handler: () => {
 
-           }
-         },
-         {
-           text: 'Yes',
-           handler: () => {
+  deletephoto(index){
+    const confirm = this.alertCtrl.create({
+        title: 'Delete ?',
+        message: 'Do you want to Delete the Picture?',
+        buttons: [
+          {
+            text: 'No',
+            handler: () => {
+            }
+          },
+          {
+            text: 'Yes',
+            handler: () => {
             this.photo.splice(index,1);
            }
          }
