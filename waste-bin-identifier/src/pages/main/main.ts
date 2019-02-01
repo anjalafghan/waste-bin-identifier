@@ -20,9 +20,11 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 export class MainPage {
 myphoto:any;
 photo:any;
-lat:any;
-lng:any;
+// lat:any;
+// lng:any;
 param1:string;
+Latitude: number;
+Longitude: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, public geo: Geolocation, private alertCtrl: AlertController, private barcodeScanner: BarcodeScanner ) {
     this.param1 = navParams.get('param1');
@@ -32,8 +34,8 @@ param1:string;
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
     this.geo.getCurrentPosition().then( pos => {
-      this.lat = pos.coords.latitude;
-      this.lng = pos.coords.longitude;
+      this.Latitude = pos.coords.latitude;
+      this.Longitude = pos.coords.longitude;
     }).catch(err => console.log(err));
   }
   ngOnInit(){
