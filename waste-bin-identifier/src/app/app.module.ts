@@ -14,7 +14,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Toast } from '@ionic-native/toast';
 import { DataServiceProvider } from '../providers/data-service/data-service';
 import { HttpModule } from '@angular/http';
-
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 
 
@@ -28,6 +28,7 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicImageViewerModule,
      HttpModule
 
   ],
