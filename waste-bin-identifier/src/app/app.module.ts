@@ -4,12 +4,13 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
-import { Camera } from '@ionic-native/camera';
-import { Geolocation } from '@ionic-native/geolocation';
-import { MyApp } from './app.component';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { MainPage } from '../pages/main/main';
 import {BarcodePage} from '../pages/barcode/barcode';
+
+import { Camera } from '@ionic-native/camera';
+import { Geolocation } from '@ionic-native/geolocation';
+import { MyApp } from './app.component';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Toast } from '@ionic-native/toast';
 import { DataServiceProvider } from '../providers/data-service/data-service';

@@ -27,16 +27,12 @@ export class BarcodePage {
   scan() {
 
     this.barcodeScanner.scan().then(data => {
-
         // this is called when a barcode is found
         this.num = data.text
        if(this.num != ''){
         this.navCtrl.push(MainPage,{
           param1: this.num
         });}
-
-        // this.navCtrl.push(RegisterPage);
-
       });
   }
 
