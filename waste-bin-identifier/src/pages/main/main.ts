@@ -4,6 +4,10 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Geolocation } from '@ionic-native/geolocation';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
+import { Observable } from 'rxjs/Observable'
+import { Toast } from '@ionic-native/toast/ngx';
+import { HTTP } from '@ionic-native/http/ngx';
+
 
 /**
  * Generated class for the MainPage page.
@@ -26,7 +30,7 @@ param1:string;
 Latitude: number;
 Longitude: number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, public geo: Geolocation, private alertCtrl: AlertController, private barcodeScanner: BarcodeScanner ) {
+  constructor(private toast: Toast,public navCtrl: NavController, public navParams: NavParams, private camera: Camera, public geo: Geolocation, private alertCtrl: AlertController, private barcodeScanner: BarcodeScanner , private http:HTTP) {
     this.param1 = navParams.get('param1');
 
   }
@@ -82,4 +86,31 @@ this.camera.getPicture(options).then((imageData) => {
      });
      confirm.present();
   }
+
+
+
+  sendPostRequest() {
+        let url = "http://192.168.43.75:8888/binData";
+        let postData = new FormData ();
+        postData.append('name','this is name');
+        let data : Observable<any> = this.http.post(url,postData);
+
+        data.subscribe( (result)=> {
+
+          this.toast.show(result, '5000', 'center').subscribe(
+            toast => {
+              console.log(toast);
+            }
+          );
+
+        } );
+
+
+
+    }
+
+
+
+
+
 }

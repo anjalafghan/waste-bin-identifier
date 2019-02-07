@@ -17,6 +17,8 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
 import { HttpModule } from '@angular/http';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -28,9 +30,11 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
     IonicImageViewerModule,
-     HttpModule
+    HttpModule,
+
 
   ],
   bootstrap: [IonicApp],
@@ -46,6 +50,7 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     Geolocation,
     Camera,
     BarcodeScanner,
+    
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 
