@@ -5,13 +5,6 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 
-/**
- * Generated class for the MainPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-main',
@@ -20,8 +13,8 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 export class MainPage {
 myphoto:any;
 photo:any;
-lat:any;
-lng:any;
+Latitude: number;
+Longitude: number;
 param1:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, public geo: Geolocation, private alertCtrl: AlertController, private barcodeScanner: BarcodeScanner ) {
@@ -32,8 +25,8 @@ param1:string;
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
     this.geo.getCurrentPosition().then( pos => {
-      this.lat = pos.coords.latitude;
-      this.lng = pos.coords.longitude;
+      this.Latitude = pos.coords.latitude;
+      this.Longitude = pos.coords.longitude;
     }).catch(err => console.log(err));
   }
   ngOnInit(){

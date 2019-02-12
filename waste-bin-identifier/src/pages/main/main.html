@@ -1,13 +1,8 @@
-<!--
-  Generated template for the mainPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>main</ion-title>
+    <ion-title>Location and other Info.</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -36,19 +31,24 @@
       </ion-col>
     </ion-row>
 
-
     <ion-row>
-      <ion-col col-auto>
-        <p><b>Lat:</b> {{ lat }}</p>
-        <p><b>Lng:</b> {{ lng }}</p>
-      </ion-col>
+
+      <ion-item>
+       <ion-label>Latitude:</ion-label>
+       <ion-input value="" [(ngModel)]="Latitude" readonly type="Number"></ion-input>
+     </ion-item>
+     <ion-item>
+       <ion-label>Longitude:</ion-label>
+       <ion-input value="" [(ngModel)]="Longitude" readonly type="Number"></ion-input>
+     </ion-item>
     </ion-row>
 
 
     </ion-card-content>
 </ion-card>
   </ion-grid>
-<ion-card id="datacard">
+<ion-card id="datacard" *ngIf="Condition==1">
+
   <ion-card-content>
     <br>
     <ion-list>
@@ -60,15 +60,21 @@
       <br>
       <button ion-button block id="signup" (click)="opencamera()">Take Picture from Camera</button>
     </ion-list>
-    <ion-slides>
-  <ion-slide col-6 *ngFor="let pic of photo; let id = index">
+    <br>
+    <ion-grid>
+      <ion-row>
+  <ion-col col-6 *ngFor="let pic of photo; let id = index">
     <ion-icon name="close" class="deleteicon" (click)="deletephoto(id)"></ion-icon>
       <img src="{{ pic }}" *ngIf="pic" imageViewer />
-    </ion-slide>
-</ion-slides>
+    </ion-col>
+    </ion-row>
+</ion-grid>
 <ion-item>
+  <br>
   <ion-textarea placeholder="Explain the damage here..."></ion-textarea>
 </ion-item>
   </ion-card-content>
+
+
 </ion-card>
 </ion-content>
