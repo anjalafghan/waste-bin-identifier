@@ -89,8 +89,7 @@
     <plugin name="cordova-plugin-geolocation" spec="4.0.1">
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To locate you" />
     </plugin>
+    <plugin name="cordova-plugin-x-toast" spec="2.7.2" />
     <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
     <engine name="android" spec="^7.1.4" />
-    <plugin name="cordova-plugin-advanced-http" spec="2.0.4" />
-    <plugin name="cordova-plugin-x-toast" spec="2.7.2" />
 </widget>

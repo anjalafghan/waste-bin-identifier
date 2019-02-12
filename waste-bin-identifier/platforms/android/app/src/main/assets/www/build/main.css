@@ -25755,6 +25755,10 @@ page-main #signup {
   margin-top: 20px;
 }
 
+page-main #datacard {
+  visibility: hidden;
+}
+
 page-welcome {
   margin-top: 25%;
 }

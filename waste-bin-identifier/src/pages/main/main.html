@@ -1,9 +1,4 @@
-<!--
-  Generated template for the mainPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -38,10 +33,7 @@
 
 
     <ion-row>
-      <!-- <ion-col col-auto>
-        <p><b>Lat:</b> {{ lat }}</p>
-        <p><b>Lng:</b> {{ lng }}</p>
-      </ion-col> -->
+
       <ion-item>
        <ion-label>Latitude:</ion-label>
        <ion-input value="" [(ngModel)]="Latitude" readonly type="Number"></ion-input>
@@ -69,19 +61,18 @@
       <button ion-button block id="signup" (click)="opencamera()">Take Picture from Camera</button>
     </ion-list>
     <br>
-    <ion-slides>
-  <ion-slide col-6 *ngFor="let pic of photo; let id = index">
+    <ion-grid>
+  <ion-col col-6 *ngFor="let pic of photo; let id = index">
     <ion-icon name="close" class="deleteicon" (click)="deletephoto(id)"></ion-icon>
       <img src="{{ pic }}" *ngIf="pic" imageViewer />
-    </ion-slide>
-</ion-slides>
+    </ion-col>
+</ion-grid>
 <ion-item>
   <br>
   <ion-textarea placeholder="Explain the damage here..."></ion-textarea>
 </ion-item>
   </ion-card-content>
 
-  <button ion-button (click)="sendPostRequest()">Post Data</button>
 
 </ion-card>
 </ion-content>
