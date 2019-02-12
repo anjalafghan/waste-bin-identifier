@@ -31,7 +31,6 @@
       </ion-col>
     </ion-row>
 
-
     <ion-row>
 
       <ion-item>
@@ -48,7 +47,8 @@
     </ion-card-content>
 </ion-card>
   </ion-grid>
-<ion-card id="datacard">
+<ion-card id="datacard" *ngIf="Condition==1">
+
   <ion-card-content>
     <br>
     <ion-list>
@@ -62,10 +62,12 @@
     </ion-list>
     <br>
     <ion-grid>
+      <ion-row>
   <ion-col col-6 *ngFor="let pic of photo; let id = index">
     <ion-icon name="close" class="deleteicon" (click)="deletephoto(id)"></ion-icon>
       <img src="{{ pic }}" *ngIf="pic" imageViewer />
     </ion-col>
+    </ion-row>
 </ion-grid>
 <ion-item>
   <br>
