@@ -16,7 +16,6 @@
 </ion-card-header>
 <ion-card-content>
     <ion-row>
-      <ion-col col-auto>
         <ion-list>
           Barcode / QR code:
           {{param1}}
@@ -28,7 +27,7 @@
             <ion-option value="1">Damaged</ion-option>
           </ion-select>
         </ion-item>
-      </ion-col>
+
     </ion-row>
 
     <ion-row>
@@ -53,11 +52,6 @@
     <br>
     <ion-list>
 
-      <ion-item>
-        <ion-label >Waste Bin Files</ion-label>
-        <ion-input type="file"></ion-input>
-      </ion-item>
-      <br>
       <button ion-button block id="signup" (click)="opencamera()">Take Picture from Camera</button>
     </ion-list>
     <br>
@@ -74,7 +68,7 @@
   <ion-textarea placeholder="Explain the damage here..."></ion-textarea>
 </ion-item>
   </ion-card-content>
-
+  <button ion-button color="primary" (click)="submitData()">Submit</button>
 
 </ion-card>
 </ion-content>
