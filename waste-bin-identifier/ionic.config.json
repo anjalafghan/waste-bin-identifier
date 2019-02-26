@@ -1,8 +1,0 @@
-{
-  "name": "waste-bin-identifier",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular",
-  "id": "c648b877"
-}
