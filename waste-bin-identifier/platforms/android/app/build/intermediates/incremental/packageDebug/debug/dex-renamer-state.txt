@@ -1,0 +1,4 @@
+#Tue Feb 26 09:49:21 IST 2019
+base.0=/Users/anjalafghan/Documents/waste-bin-identifier/waste-bin-identifier/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
