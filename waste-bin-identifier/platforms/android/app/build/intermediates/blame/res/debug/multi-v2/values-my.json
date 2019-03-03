@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\anjalafghan\\Documents\\waste-bin-identifier\\waste-bin-identifier\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-my\\values-my.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\anjalafghan\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\f4f5e9a9dbaf0e4939aeedac37e5232c\\res\\values-my\\values-my.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\n\\waste-bin-identifier\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-my\\values-my.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Ankit\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\d604446ef5cd2b1975e4e9dfb1dc7c2a\\res\\values-my\\values-my.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}
