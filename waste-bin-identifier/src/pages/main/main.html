@@ -29,7 +29,8 @@
              </ion-row>
              <ion-row>
                 <ion-label>Condition:</ion-label>
-                <ion-select [(ngModel)]="Condition" formControlName="condition">
+                <ion-select [(ngModel)]="Condition" formControlName="condition" placeholder="Select Condition">
+                   
                     <ion-option value="0">Good</ion-option>
                     <ion-option value="1">Damaged</ion-option>
                 </ion-select>
@@ -47,6 +48,14 @@
                   </ion-col>
                   </ion-row>
               </ion-grid>
+              <ion-row>
+                <ion-label>
+                  Explain Damage
+                </ion-label>
+              </ion-row>
+              <ion-row>
+                <ion-textarea formControlName="damage" placeholder="Explain Damage"></ion-textarea>
+              </ion-row>
               <button ion-button block type="submit" (click)="sub()">Submit</button>
               </ion-row>
            </form>

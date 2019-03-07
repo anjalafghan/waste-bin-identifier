@@ -27,6 +27,8 @@ private tito: FormGroup;
        latitude: ['',Validators.required],
        longitude: ['',Validators.required],
        condition: ['',Validators.required],
+       date: [Date(), Validators.required],
+       damage: ['',Validators.required],
        image: [this.myphoto,Validators.required]
      });
   }

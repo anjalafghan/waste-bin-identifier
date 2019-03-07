@@ -10,6 +10,7 @@ module.exports = {
                 latitude: req.body.latitude,
                 longitude: req.body.longitude,
                 condition: condition,
+                date: req.body.date,
                 image: req.body.image
             };
             Bindata.create(body).then(data =>{
@@ -24,6 +25,8 @@ module.exports = {
                 latitude: req.body.latitude,
                 longitude: req.body.longitude,
                 condition: condition,
+                date: req.body.date,
+                damage: req.body.damage,
                 image: req.body.image
             };
             Bindata.create(body).then(data =>{
