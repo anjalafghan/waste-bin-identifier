@@ -1,0 +1,141 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Location and other Info.</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="main">
+      <ion-card>
+         <ion-card-header>
+           <ion-card-title>
+             Your Bin...
+           </ion-card-title>
+         </ion-card-header>
+         <ion-card-content>
+           <form [formGroup]="tito">
+             <ion-row>
+              <ion-list>
+                Barcode / QR code:
+                 <p>{{param1}}</p>
+               </ion-list>
+             </ion-row>
+             <ion-row>
+                <ion-label>Latitude:</ion-label>
+              <ion-input value="{{ Latitude }}"  readonly type="Number" formControlName="latitude"></ion-input>
+             </ion-row>
+             <ion-row>
+                <ion-label>Longitude:</ion-label>
+              <ion-input value="{{ Longitude }}"  readonly type="Number" formControlName="longitude"></ion-input>
+             </ion-row>
+             <ion-row>
+                <ion-select [(ngModel)]="Condition" formControlName="condition">
+                    <ion-option value="0">Good</ion-option>
+                    <ion-option value="1">Damaged</ion-option>
+                </ion-select>
+             </ion-row>
+             <ion-row>
+              <button ion-button block type="submit" *ngIf="Condition==0" (click)="sub()">Submit</button>
+             </ion-row>
+             <ion-row *ngIf="Condition==1">
+                <button ion-button block  (click)="opencamera()" >Take Picture from Camera</button>
+                <ion-grid>
+                    <ion-row>
+                <ion-col col-6 *ngFor="let pic of photo; let id = index">
+                  <ion-icon name="close" class="deleteicon" (click)="deletephoto(id)"></ion-icon>
+                    <img src="{{ pic }}" *ngIf="pic" imageViewer />
+                  </ion-col>
+                  </ion-row>
+              </ion-grid>
+              <button ion-button block type="submit" (click)="sub()">Submit</button>
+              </ion-row>
+           </form>
+         </ion-card-content>
+      </ion-card>
+</ion-content>
+<!---<ion-header>
+
+  <ion-navbar>
+    <ion-title>Location and other Info.</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding id="main">
+  <ion-grid>
+    <ion-card>
+      <ion-card-header>
+              <ion-card-title>
+                Your Bin
+              </ion-card-title>
+      </ion-card-header>
+  <ion-card-content>
+      <ion-row>
+         <ion-col col-auto>
+          <ion-list>
+            Barcode / QR code:
+             <p>{{param1}}</p>
+           </ion-list>
+           <ion-item id="Condition">
+              <ion-label>Condition</ion-label>
+               <ion-select [(ngModel)]="Condition">
+                    <ion-option value="0">Good</ion-option>
+                    <ion-option value="1">Damaged</ion-option>
+                </ion-select>
+               </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+
+      <ion-item>
+       <ion-label>Latitude:</ion-label>
+       
+     </ion-item>
+     <ion-item>
+       <ion-label>Longitude:</ion-label>
+       <ion-input value="" [(ngModel)]="Longitude" readonly type="Number"></ion-input>
+     </ion-item>
+    </ion-row>
+
+     <ion-row>
+      <ion-item>
+      
+        <form [formGroup]="tito" (ngSubmit)="sub()">
+       <ion-textarea placeholder="Explain the damage here..." formControlName="damage"></ion-textarea>
+        <button ion-button type="submit">Submit</button>
+   </form>
+   </ion-item>
+     </ion-row>
+    </ion-card-content>
+</ion-card>
+  </ion-grid>
+<ion-card id="datacard" *ngIf="Condition==1">
+
+  <ion-card-content>
+    <br>
+    <ion-list>
+
+      <ion-item>
+        <ion-label >Waste Bin Files</ion-label>
+        <ion-input type="file"></ion-input>
+      </ion-item>
+      <br>
+      <button ion-button block id="signup" (click)="opencamera()">Take Picture from Camera</button>
+    </ion-list>
+   
+    <br>
+    <ion-grid>
+      <ion-row>
+  <ion-col col-6 *ngFor="let pic of photo; let id = index">
+    <ion-icon name="close" class="deleteicon" (click)="deletephoto(id)"></ion-icon>
+      <img src="{{ pic }}" *ngIf="pic" imageViewer />
+    </ion-col>
+    </ion-row>
+</ion-grid>
+
+  </ion-card-content>
+
+
+</ion-card>
+</ion-content>-->
