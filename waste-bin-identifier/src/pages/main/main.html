@@ -28,6 +28,7 @@
               <ion-input value="{{ Longitude }}"  readonly type="Number" formControlName="longitude"></ion-input>
              </ion-row>
              <ion-row>
+                <ion-label>Condition:</ion-label>
                 <ion-select [(ngModel)]="Condition" formControlName="condition">
                     <ion-option value="0">Good</ion-option>
                     <ion-option value="1">Damaged</ion-option>

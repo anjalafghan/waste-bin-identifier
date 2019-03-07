@@ -13,9 +13,9 @@ module.exports = {
                 image: req.body.image
             };
             Bindata.create(body).then(data =>{
-                 return res.status(httpstatus.CREATED).json({ message: 'Good Data is Created'});
+                 return res.status(httpstatus.CREATED).json({ data: 'Good Data is Created'});
             }, err => {
-                 return res.status(httpstatus.INTERNAL_SERVER_ERROR).json({ message: 'Error'}); 
+                 return res.status(httpstatus.INTERNAL_SERVER_ERROR).json({ data: 'Error'}); 
             });
         }else{
             const condition = "Damage Condition";
@@ -27,9 +27,9 @@ module.exports = {
                 image: req.body.image
             };
             Bindata.create(body).then(data =>{
-                 return res.status(httpstatus.CREATED).json({ message: 'Damage Data is Created'});
+                 return res.status(httpstatus.CREATED).json({ data: 'Damage Data is Created'});
             }, err => {
-                 return res.status(httpstatus.INTERNAL_SERVER_ERROR).json({ message: 'Error'}); 
+                 return res.status(httpstatus.INTERNAL_SERVER_ERROR).json({ data: 'Error'}); 
             });
         }
     }

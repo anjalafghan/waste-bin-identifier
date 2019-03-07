@@ -15,6 +15,7 @@ const url = 'http://192.168.43.153:3000/api/wastebin';
 export class MainPage {
 myphoto:any;
 photo:any;
+errmsg:any;
 Latitude: number;
 Longitude: number;
 param1:string;
@@ -26,7 +27,7 @@ private tito: FormGroup;
        latitude: ['',Validators.required],
        longitude: ['',Validators.required],
        condition: ['',Validators.required],
-       image: [this.photo,Validators.required]
+       image: [this.myphoto,Validators.required]
      });
   }
 
@@ -43,8 +44,20 @@ private tito: FormGroup;
   sub(){
   this.http.post(`${url}/bindata`,this.tito.value).subscribe(data => {
       console.log(data);
+      const alert =  this.alertCtrl.create({
+        title: 'Success',
+        message: 'Submited successfully',
+        buttons: ['OK']
+      });
+     alert.present();
   }, err => {
       console.log(err);
+      const alert =  this.alertCtrl.create({
+        title: 'Failed',
+        message: 'Data Cannot Submited',
+        buttons: ['OK']
+      });
+     alert.present();
   });
   }
   opencamera(){
