@@ -1,11 +1,11 @@
 
 <ion-header>
-  <ion-navbar color="primary">
-    <ion-title> WasteBin</ion-title>
+  <ion-navbar  color="primary">
+    <ion-title text-center>Bin Information</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding id="main">
-      <ion-card>
+      <ion-card class="shadow">
          <ion-card-header>
            <ion-card-title>
              Your Bin : {{param1}}
@@ -18,8 +18,8 @@
                 <ion-row>
                   <ion-col>
                     <ion-item>
-                      <ion-label>Latitude: </ion-label>
-                      <ion-label>{{Latitude}}&nbsp;&nbsp;&nbsp;<ion-icon name = "pin" slot="end"></ion-icon></ion-label>
+                      <ion-label readonly>Latitude: </ion-label>
+                      <ion-label readonly>{{Latitude}}&nbsp;&nbsp;&nbsp;<ion-icon name = "pin" slot="end"></ion-icon></ion-label>
                     </ion-item>
                   </ion-col>
                 </ion-row>
@@ -45,11 +45,13 @@
                   </ion-col>
 
                 </ion-row>
+                <br>
+                <br>
                 <ion-row>
                  <button ion-button block type="submit" *ngIf="Condition==0" (click)="sub()">Submit</button>
                 </ion-row>
                 <ion-row *ngIf="Condition==1">
-                   <button ion-button block  (click)="opencamera()" >Take Picture from Camera</button>
+                   <button ion-button block  (click)="opencamera()" >Capture Image &nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="camera"></ion-icon> </button>
                    <ion-grid>
                        <ion-row>
                    <ion-col col-6 *ngFor="let pic of photo; let id = index">
@@ -61,15 +63,9 @@
                      <ion-input value="{{ photo[1] }}" formControlName="pic"></ion-input>
                      </ion-row>
                  </ion-grid>
-                 <ion-row>
-                   <ion-label>
-                     Explain Damage
-                   </ion-label>
-                 </ion-row>
-                 <ion-row>
 
-                   <ion-textarea formControlName="damage" placeholder="Explain Damage"></ion-textarea>
-                 </ion-row>
+                   <ion-textarea class="borderText" formControlName="damage" placeholder="Explain the bin's Damage here"></ion-textarea>
+
                  <button ion-button block type="submit" (click)="sub()">Submit</button>
                  </ion-row>
               </ion-grid>
