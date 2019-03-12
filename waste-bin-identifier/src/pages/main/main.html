@@ -36,10 +36,27 @@
                     <ion-option value="1">Damaged</ion-option>
                 </ion-select>
              </ion-row>
-             <ion-row>
-              <button ion-button block type="submit" *ngIf="Condition==0" (click)="sub()">Submit</button>
+             <ion-row *ngIf="Condition==0">
+                <ion-label>Asset Type:</ion-label>
+                    <ion-select  formControlName="asset" placeholder="Select Asset Type">   
+                      <ion-option>Steel Bin</ion-option>
+                      <ion-option>Plastic Green</ion-option>
+                      <ion-option>Plastic Yellow</ion-option>
+                      <ion-option>Plastic Blue</ion-option>
+                      <ion-option>OCC age</ion-option>
+                  </ion-select>
+                  
+              <button ion-button block type="submit"  (click)="sub()">Submit</button>
              </ion-row>
              <ion-row *ngIf="Condition==1">
+                <ion-label>Asset Type:</ion-label>
+                    <ion-select  formControlName="asset" placeholder="Select Asset Type">   
+                      <ion-option>Steel Bin</ion-option>
+                      <ion-option>Plastic Green</ion-option>
+                      <ion-option>Plastic Yellow</ion-option>
+                      <ion-option>Plastic Blue</ion-option>
+                      <ion-option>OCC age</ion-option>
+                  </ion-select>
                 <button ion-button block  (click)="opencamera()" >Take Picture from Camera</button>
                 <ion-grid>
                     <ion-row>
@@ -48,8 +65,9 @@
                     <img src="{{ pic }}" *ngIf="pic" imageViewer  />
                     
                   </ion-col>
-                  <ion-input value="{{ photo[0] }}" formControlName="pic"></ion-input>
-                  <ion-input value="{{ photo[1] }}" formControlName="pic"></ion-input>
+                  <ion-input type="hidden" value="{{ photo[0] }}" formControlName="pic"></ion-input>
+                  <ion-input  type="hidden" value="{{ photo[1] }}" formControlName="pic1"></ion-input>
+                  <ion-input  type="hidden" value="{{ photo[2] }}" formControlName="pic2"></ion-input>
                   </ion-row>
               </ion-grid>
               <ion-row>
