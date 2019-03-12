@@ -1,0 +1,4 @@
+#Tue Mar 12 14:58:46 IST 2019
+base.0=C\:\\ionic\\waste-bin-identifier\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

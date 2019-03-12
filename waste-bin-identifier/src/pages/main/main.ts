@@ -7,7 +7,11 @@ import { FormGroup,FormBuilder,Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 
+<<<<<<< HEAD
 const url = 'http://192.168.137.43:3000/api/wastebin';
+=======
+const url = 'http://192.168.3.185:3000/api/wastebin';
+>>>>>>> Backend-latest
 
 @IonicPage()
 @Component({
@@ -29,9 +33,12 @@ private tito: FormGroup;
        qrdata: [this.param1,Validators.required],
        latitude: ['',Validators.required],
        longitude: ['',Validators.required],
+       asset: ['',Validators.required],
        condition: ['',Validators.required],
        date: [Date(), Validators.required],
        pic: [''],
+       pic1: [''],
+       pic2: [''],
        damage: ['',Validators.required]
 
      });
@@ -69,7 +76,7 @@ private tito: FormGroup;
   }
   opencamera(){
    const options: CameraOptions = {
-  quality: 1,
+  quality: 70,
   destinationType: this.camera.DestinationType.DATA_URL,
   encodingType: this.camera.EncodingType.JPEG,
   saveToPhotoAlbum: true,

@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { BarcodePage } from '../barcode/barcode';
-const url = 'http://192.168.43.153:3000/api/wastebin';
+const url = 'http://192.168.3.185:3000/api/wastebin';
 /**
  * Generated class for the WelcomePage page.
  *
@@ -30,7 +30,7 @@ export class WelcomePage {
    
   }
   login(){
-  this.http.post(`${url}/bindata`,this.loginform.value).subscribe(data => {
+  this.http.post(`${url}/authen`,this.loginform.value).subscribe(data => {
      console.log(data);
      
   }, err => {
