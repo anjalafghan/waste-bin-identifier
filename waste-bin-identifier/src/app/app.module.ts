@@ -15,8 +15,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
+import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 
 @NgModule({
   declarations: [
@@ -31,8 +30,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     IonicImageViewerModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
-     
+    ReactiveFormsModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,6 +45,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SplashScreen,
     Geolocation,
     Camera,
+    FileTransfer,
     BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

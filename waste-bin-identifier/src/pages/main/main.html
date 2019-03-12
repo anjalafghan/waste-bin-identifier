@@ -17,6 +17,7 @@
               <ion-list>
                 Barcode / QR code:
                  <p>{{param1}}</p>
+                
                </ion-list>
              </ion-row>
              <ion-row>
@@ -28,7 +29,9 @@
               <ion-input value="{{ Longitude }}"  readonly type="Number" formControlName="longitude"></ion-input>
              </ion-row>
              <ion-row>
-                <ion-select [(ngModel)]="Condition" formControlName="condition">
+                <ion-label>Condition:</ion-label>
+                <ion-select [(ngModel)]="Condition" formControlName="condition" placeholder="Select Condition">
+                   
                     <ion-option value="0">Good</ion-option>
                     <ion-option value="1">Damaged</ion-option>
                 </ion-select>
@@ -42,10 +45,22 @@
                     <ion-row>
                 <ion-col col-6 *ngFor="let pic of photo; let id = index">
                   <ion-icon name="close" class="deleteicon" (click)="deletephoto(id)"></ion-icon>
-                    <img src="{{ pic }}" *ngIf="pic" imageViewer />
+                    <img src="{{ pic }}" *ngIf="pic" imageViewer  />
+                    
                   </ion-col>
+                  <ion-input value="{{ photo[0] }}" formControlName="pic"></ion-input>
+                  <ion-input value="{{ photo[1] }}" formControlName="pic"></ion-input>
                   </ion-row>
               </ion-grid>
+              <ion-row>
+                <ion-label>
+                  Explain Damage
+                </ion-label>
+              </ion-row>
+              <ion-row>
+                
+                <ion-textarea formControlName="damage" placeholder="Explain Damage"></ion-textarea>
+              </ion-row>
               <button ion-button block type="submit" (click)="sub()">Submit</button>
               </ion-row>
            </form>

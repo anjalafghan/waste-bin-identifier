@@ -91,5 +91,6 @@
     </plugin>
     <plugin name="cordova-plugin-x-toast" spec="2.7.2" />
     <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
+    <plugin name="cordova-plugin-file-transfer" spec="1.7.1" />
     <engine name="android" spec="^7.1.4" />
 </widget>

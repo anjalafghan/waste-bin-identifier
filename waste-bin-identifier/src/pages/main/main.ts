@@ -5,6 +5,8 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { FormGroup,FormBuilder,Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
+
 const url = 'http://192.168.43.153:3000/api/wastebin';
 
 @IonicPage()
@@ -15,18 +17,23 @@ const url = 'http://192.168.43.153:3000/api/wastebin';
 export class MainPage {
 myphoto:any;
 photo:any;
+errmsg:any;
 Latitude: number;
 Longitude: number;
 param1:string;
 private tito: FormGroup;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, public geo: Geolocation, private alertCtrl: AlertController, private barcodeScanner: BarcodeScanner, private fb: FormBuilder, private http: HttpClient ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, public geo: Geolocation, private alertCtrl: AlertController, private barcodeScanner: BarcodeScanner, private fb: FormBuilder,
+     private http: HttpClient, private ft: FileTransfer  ) {
     this.param1 = navParams.get('param1');
      this.tito = this.fb.group({
        qrdata: [this.param1,Validators.required],
        latitude: ['',Validators.required],
        longitude: ['',Validators.required],
        condition: ['',Validators.required],
-       image: [this.photo,Validators.required]
+       date: [Date(), Validators.required],
+       pic: [''],
+       damage: ['',Validators.required]
+     
      });
   }
 
@@ -41,15 +48,28 @@ private tito: FormGroup;
   this.photo = [];
   }
   sub(){
-  this.http.post(`${url}/bindata`,this.tito.value).subscribe(data => {
+    
+    this.http.post(`${url}/bindata`,this.tito.value).subscribe(data => {
       console.log(data);
+      const alert =  this.alertCtrl.create({
+       title: 'Success',
+        message: 'Submited successfully',
+        buttons: ['OK']
+      });
+     alert.present();
   }, err => {
       console.log(err);
+      const alert =  this.alertCtrl.create({
+        title: 'Failed',
+       message: 'Data Cannot Submited',
+      buttons: ['OK']
+      });
+   alert.present();
   });
   }
   opencamera(){
    const options: CameraOptions = {
-  quality: 70,
+  quality: 1,
   destinationType: this.camera.DestinationType.DATA_URL,
   encodingType: this.camera.EncodingType.JPEG,
   saveToPhotoAlbum: true,
