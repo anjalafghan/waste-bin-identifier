@@ -6,7 +6,8 @@ const dataSchema = mongoose.Schema({
        longitude: { type: Number },
        condition: { type: String },
        date: { type: Date },
-       damage: { type: String},
-       image: { type: String }
+       image: [{ type: String }],
+       damage: { type: String}
+      
 });
 module.exports = mongoose.model('Bindata', dataSchema);

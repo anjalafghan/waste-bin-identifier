@@ -4,8 +4,18 @@ const mongoose = require('mongoose');
 const dbconfig = require('./config/secret');
 const cookie = require('cookie-parser');
 const cors = require('cors');
+const multer = require('multer');
 const app = express();
-
+const upload_path ='./uploads';
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, upload_path);
+      },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now())
+      }
+});
+var upload = multer({ storage: storage });
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({extended: true, limit: '50mb'}))
 app.use(cookie());
@@ -24,7 +34,9 @@ mongoose.Promise = global.Promise;
 mongoose.connect(dbconfig.url, { useNewUrlParser: true });
 //data_routes
 const Bindata = require('./routes/data_routes');
+const image = require('./routes/image');
 app.use('/api/wastebin', Bindata);//*
+app.use('/api/wastebin',image);
 
 app.listen(3000, () => {
     console.log('Running on port 3000');
