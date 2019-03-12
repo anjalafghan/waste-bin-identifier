@@ -14,13 +14,22 @@
          <ion-card-content>
            <form [formGroup]="tito">
               <ion-grid>
+
                 <ion-row>
-                   <ion-label>Latitude:</ion-label>
-                 <ion-input value="{{ Latitude }}"  readonly type="Number" formControlName="latitude"></ion-input>
+                  <ion-col>
+                    <ion-item>
+                      <ion-label>Latitude: </ion-label>
+                      <ion-label>{{Latitude}}&nbsp;&nbsp;&nbsp;<ion-icon name = "pin" slot="end"></ion-icon></ion-label>
+                    </ion-item>
+                  </ion-col>
                 </ion-row>
                 <ion-row>
-                   <ion-label>Longitude:</ion-label>
-                 <ion-input value="{{ Longitude }}"  readonly type="Number" formControlName="longitude"></ion-input>
+                  <ion-col>
+                    <ion-item>
+                      <ion-label>Longitude: </ion-label>
+                      <ion-label>{{Longitude}}&nbsp;&nbsp;&nbsp;<ion-icon name = "pin" slot="end"></ion-icon></ion-label>
+                    </ion-item>
+                  </ion-col>
                 </ion-row>
                 <ion-row>
                   <ion-col>

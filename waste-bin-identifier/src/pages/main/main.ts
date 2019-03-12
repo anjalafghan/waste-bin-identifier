@@ -7,7 +7,7 @@ import { FormGroup,FormBuilder,Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 
-const url = 'http://192.168.43.153:3000/api/wastebin';
+const url = 'http://192.168.137.43:3000/api/wastebin';
 
 @IonicPage()
 @Component({
@@ -33,7 +33,7 @@ private tito: FormGroup;
        date: [Date(), Validators.required],
        pic: [''],
        damage: ['',Validators.required]
-     
+
      });
   }
 
@@ -48,7 +48,7 @@ private tito: FormGroup;
   this.photo = [];
   }
   sub(){
-    
+
     this.http.post(`${url}/bindata`,this.tito.value).subscribe(data => {
       console.log(data);
       const alert =  this.alertCtrl.create({
@@ -61,7 +61,7 @@ private tito: FormGroup;
       console.log(err);
       const alert =  this.alertCtrl.create({
         title: 'Failed',
-       message: 'Data Cannot Submited',
+       message: 'Data Cannot Submitted',
       buttons: ['OK']
       });
    alert.present();
