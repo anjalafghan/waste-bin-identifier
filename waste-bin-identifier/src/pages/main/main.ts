@@ -61,7 +61,7 @@ private tito: FormGroup;
       console.log(data);
       const alert =  this.alertCtrl.create({
        title: 'Success',
-        message: 'Submited successfully',
+        message: 'Submitted Successfully',
         buttons: ['OK']
       });
      alert.present();
@@ -72,7 +72,7 @@ private tito: FormGroup;
       console.log(err);
       const alert =  this.alertCtrl.create({
         title: 'Failed',
-       message: 'Data Cannot Submitted',
+       message: 'Failed To Submit. Please Check your Network Connection ',
       buttons: ['OK']
       });
    alert.present();
