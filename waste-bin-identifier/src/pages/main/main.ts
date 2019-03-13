@@ -9,7 +9,7 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
 import {BarcodePage} from '../../pages/barcode/barcode';
 
 
-const url = 'http://192.168.43.75:3000/api/wastebin';
+const url = 'http://192.168.1.118:3000/api/wastebin';
 
 @IonicPage()
 @Component({

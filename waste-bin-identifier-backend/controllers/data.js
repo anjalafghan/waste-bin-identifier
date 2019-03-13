@@ -6,8 +6,6 @@ const httpstatus = require('http-status');
 
 module.exports = {
     CreateBin(req,res){
-        console.log(req.body);
-
 
         if(req.body.condition == 0){
             const condition = "Good Condition";
@@ -43,22 +41,19 @@ module.exports = {
                let name3 = 'uploads/IMG3-' + Date.now() + '.jpg';
 
               fs.writeFile(name,base64Image, { encoding: 'base64'}, function(err){
-                     console.log('file Created')
+                     console.log('')
                 });
 
                 fs.writeFile(name1,base64Image1, { encoding: 'base64'}, function(err){
-                    console.log('file Created')
+                    console.log('')
                });
                fs.writeFile(name2,base64Image2, { encoding: 'base64'}, function(err){
-                console.log('file Created')
+                console.log('')
            });
            fs.writeFile(name3,base64Image3, { encoding: 'base64'}, function(err){
-                  console.log('file Created')
+                  console.log('')
              });
-           console.log(name);
-           console.log(name1);
-           console.log(name2);
-           console.log(name3);
+
 
             const body = {
                 qrdata: req.body.qrdata,

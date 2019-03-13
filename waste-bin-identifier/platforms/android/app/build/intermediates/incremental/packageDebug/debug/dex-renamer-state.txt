@@ -1,4 +1,4 @@
-#Wed Mar 13 12:52:00 IST 2019
+#Wed Mar 13 14:47:38 IST 2019
 base.0=/Users/anjalafghan/Downloads/waste-bin-identifier-backend-takatak/waste-bin-identifier/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

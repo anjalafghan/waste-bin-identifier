@@ -7,28 +7,43 @@
 <ion-content padding id="main">
       <ion-card class="shadow">
          <ion-card-header>
-           <ion-card-title>
+           <ion-card-title text-center>
              Your Bin : {{param1}}
            </ion-card-title>
          </ion-card-header>
          <ion-card-content>
            <form [formGroup]="tito">
               <ion-grid>
-                <ion-row>
-                              <ion-label>Latitude:&nbsp; <ion-icon name="pin"></ion-icon></ion-label>
-                            <ion-input value="{{ Latitude }}"  readonly type="Number" formControlName="latitude"></ion-input>
-                           </ion-row>
-                           <ion-row>
-                              <ion-label>Longitude:&nbsp; <ion-icon name="pin"></ion-icon> </ion-label>
-                            <ion-input value="{{ Longitude }}"  readonly type="Number" formControlName="longitude"></ion-input>
-                           </ion-row>
-
+            <ion-row>
+              <ion-col col-6>
+                <ion-item id = "gray">
+                  <ion-label>Latitude:&nbsp;</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col col-6>
+                <ion-item id = "gray">
+                  <ion-input value="{{ Latitude }}"  readonly type="Number" formControlName="latitude">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="pin"></ion-icon></ion-input>
+                </ion-item>
+              </ion-col>
+              </ion-row>
+                  <ion-row>
+                    <ion-col col-6>
+                      <ion-item id = "gray">
+                        <ion-label>Longitude:&nbsp;</ion-label>
+                      </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                      <ion-item id = "gray">
+                        <ion-input value="{{ Longitude }}"  readonly type="Number" formControlName="longitude">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="pin"></ion-icon></ion-input>
+                      </ion-item>
+                    </ion-col>
+                    </ion-row>
                 <ion-row>
                   <ion-col>
                     <ion-list>
                       <ion-item>
                         <ion-label>Asset Type:</ion-label>
-                            <ion-select  formControlName="asset" placeholder="Select Asset Type">
+                            <ion-select  formControlName="asset" id="asset" placeholder="Select Asset Type">
                               <ion-option>Steel Bin</ion-option>
                               <ion-option>Plastic Green</ion-option>
                               <ion-option>Plastic Yellow</ion-option>
@@ -55,7 +70,7 @@
                 <br>
                 <br>
                 <ion-row>
-                 <button ion-button block type="submit" *ngIf="Condition==0" (click)="sub()">Submit</button>
+                 <button ion-button block type="submit" *ngIf="Condition==0" (click)="sub()">Submit &nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="log-in"></ion-icon></button>
                 </ion-row>
                 <ion-row *ngIf="Condition==1">
                    <button ion-button block  (click)="opencamera()" >Capture Image &nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="camera"></ion-icon> </button>
@@ -74,7 +89,7 @@
                      </ion-row>
                  </ion-grid>
                    <ion-textarea class="borderText" formControlName="damage" placeholder="Explain the bin's Damage here"></ion-textarea>
-                 <button ion-button block type="submit" (click)="sub()">Submit</button>
+                 <button ion-button block type="submit" (click)="sub()">Submit &nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="log-in"></ion-icon></button>
                  </ion-row>
               </ion-grid>
            </form>

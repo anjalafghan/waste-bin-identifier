@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { BarcodePage } from '../barcode/barcode';
-const url = 'http://192.168.43.75:3000/api/wastebin';
+const url = 'http://192.168.1.118:3000/api/wastebin';
 /**
  * Generated class for the WelcomePage page.
  *

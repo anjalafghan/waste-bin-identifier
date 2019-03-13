@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -25744,11 +25745,26 @@ image-viewer.ion-page img {
   margin: 0 auto;
 }
 
+@font-face {
+  font-family: AppFont;
+  src: url("../../assets/fonts/Arimo-Regular.ttf");
+}
+
+body, button, ion-label, ion-input, h1, h2, h3, h4, h5, ion-title, ion-navbar, ion-card, ion-card-title, ion-card-header {
+  font-family: ‘AppFont’ !important;
+}
+
 page-barcode #capture {
   margin: 5px;
   margin-top: 55%;
   width: 100%;
   height: 50px;
+}
+
+page-barcode .shadow {
+  border: none !important;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 page-main #signup {
@@ -25763,6 +25779,10 @@ page-main textarea {
   font-size: 1.1em;
 }
 
+page-main #asset {
+  max-width: 100%;
+}
+
 page-main .shadow {
   border: none !important;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -25770,11 +25790,15 @@ page-main .shadow {
 }
 
 page-main .borderText {
-  border-bottom: 1px solid #ff6000;
+  border-bottom: 1px solid #46932f;
 }
 
 page-main ion-card {
   padding-bottom: 10%;
+}
+
+page-main #gray {
+  color: gray;
 }
 
 page-welcome {
@@ -25783,4 +25807,10 @@ page-welcome {
 
 page-welcome #mycard {
   height: 300px;
+}
+
+page-welcome .shadow {
+  border: none !important;
+  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
