@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Mar 13 14:47:38 IST 2019
+#Wed Mar 13 15:19:28 IST 2019
 2.path=www/plugins/cordova-plugin-geolocation/www/android/geolocation.js
 14.set=ASSET
 107.baseType=DIRECTORY
