@@ -1,0 +1,83 @@
+
+<ion-header>
+  <ion-navbar  color="primary">
+    <ion-title>Bin Information</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="main">
+      <ion-card class="shadow">
+         <ion-card-header>
+           <ion-card-title>
+             Your Bin : {{param1}}
+           </ion-card-title>
+         </ion-card-header>
+         <ion-card-content>
+           <form [formGroup]="tito">
+              <ion-grid>
+                <ion-row>
+                              <ion-label>Latitude:&nbsp; <ion-icon name="pin"></ion-icon></ion-label>
+                            <ion-input value="{{ Latitude }}"  readonly type="Number" formControlName="latitude"></ion-input>
+                           </ion-row>
+                           <ion-row>
+                              <ion-label>Longitude:&nbsp; <ion-icon name="pin"></ion-icon> </ion-label>
+                            <ion-input value="{{ Longitude }}"  readonly type="Number" formControlName="longitude"></ion-input>
+                           </ion-row>
+
+                <ion-row>
+                  <ion-col>
+                    <ion-list>
+                      <ion-item>
+                        <ion-label>Asset Type:</ion-label>
+                            <ion-select  formControlName="asset" placeholder="Select Asset Type">
+                              <ion-option>Steel Bin</ion-option>
+                              <ion-option>Plastic Green</ion-option>
+                              <ion-option>Plastic Yellow</ion-option>
+                              <ion-option>Plastic Blue</ion-option>
+                              <ion-option>OCC age</ion-option>
+                          </ion-select>
+                      </ion-item>
+                    </ion-list>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <ion-list>
+                      <ion-item>
+                        <ion-label>Condition:</ion-label>
+                        <ion-select [(ngModel)]="Condition" formControlName="condition" placeholder="Select Condition">
+                            <ion-option value="0">Good</ion-option>
+                            <ion-option value="1">Damaged</ion-option>
+                        </ion-select>
+                      </ion-item>
+                    </ion-list>
+                  </ion-col>
+                </ion-row>
+                <br>
+                <br>
+                <ion-row>
+                 <button ion-button block type="submit" *ngIf="Condition==0" (click)="sub()">Submit</button>
+                </ion-row>
+                <ion-row *ngIf="Condition==1">
+                   <button ion-button block  (click)="opencamera()" >Capture Image &nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="camera"></ion-icon> </button>
+                   <ion-grid>
+                       <ion-row>
+                   <ion-col col-6 *ngFor="let pic of photo; let id = index">
+                     <ion-icon name="close" class="deleteicon" (click)="deletephoto(id)"></ion-icon>
+                       <img src="{{ pic }}" *ngIf="pic" imageViewer  />
+
+                     </ion-col>
+                     <ion-input type="hidden" value="{{ photo[0] }}" formControlName="pic"></ion-input>
+                     <ion-input  type="hidden" value="{{ photo[1] }}" formControlName="pic1"></ion-input>
+                     <ion-input  type="hidden" value="{{ photo[2] }}" formControlName="pic2"></ion-input>
+                     <ion-input  type="hidden" value="{{ photo[3] }}" formControlName="pic3"></ion-input>
+
+                     </ion-row>
+                 </ion-grid>
+                   <ion-textarea class="borderText" formControlName="damage" placeholder="Explain the bin's Damage here"></ion-textarea>
+                 <button ion-button block type="submit" (click)="sub()">Submit</button>
+                 </ion-row>
+              </ion-grid>
+           </form>
+         </ion-card-content>
+      </ion-card>
+</ion-content>

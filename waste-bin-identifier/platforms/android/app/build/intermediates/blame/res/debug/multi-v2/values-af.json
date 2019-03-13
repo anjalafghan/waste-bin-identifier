@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/anjalafghan/Downloads/waste-bin-identifier-backend-takatak/waste-bin-identifier/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-af/values-af.xml",
+            "map": [
+                {
+                    "source": "/Users/anjalafghan/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/f4f5e9a9dbaf0e4939aeedac37e5232c/res/values-af/values-af.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/anjalafghan/Downloads/waste-bin-identifier-backend-takatak/waste-bin-identifier/C:\\ionic\\waste-bin-identifier\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-af\\values-af.xml",
+            "map": [
+                {
+                    "source": "/Users/anjalafghan/Downloads/waste-bin-identifier-backend-takatak/waste-bin-identifier/C:\\Users\\dell\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\0dddb96515c28fa5b3b4beacc32909b5\\res\\values-af\\values-af.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}
